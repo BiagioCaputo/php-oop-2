@@ -29,7 +29,7 @@ require_once __DIR__ . "/data/database.php"
     </header>
     <main class="bg-secondary">
         <div class="products-box container py-5">
-            <div class="row">
+            <div class="row row-gap-5">
                 <?php foreach ($products as $product) : ?>
                 <div class="col">
                     <div class="card" style="width: 18rem;">
@@ -39,9 +39,9 @@ require_once __DIR__ . "/data/database.php"
                             <h5 class="card-title"><?= $product->name ?></h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><?= $product->category->name ?></li>
-                            <li class="list-group-item"><?= $product->species->name ?></li>
-                            <li class="list-group-item"><?= $product->price ?> $</li>
+                            <li class="list-group-item">Category: <?= $product->category->name ?></li>
+                            <li class="list-group-item">Species: <?= $product->species->name ?></li>
+                            <li class="list-group-item">Price: <?= $product->price ?> $</li>
                         </ul>
                         <div class="card-body">
                             <a href="#" class="card-link text-decoration-none">Add to cart <i
